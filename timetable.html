@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <!--Nhúng phông Roboto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!--Nhúng file css-->
+    <link rel="stylesheet" href="./css/timetable.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>ĐẠI HỌC NỘI VỤ</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="row">
+            <div class="header-left col-md-4">
+                <div class="box_logo">
+                    <a href="logo.html"><img src="./img/dhnoivu.png" alt=""></a>
+                </div>
+                <div class="box_nameUni">
+                    <p class="nameUni_top">ĐẠI HỌC NỘI VỤ HÀ NỘI</p>
+                    <p class="nameUni_bottom">TIỆN ÍCH SINH VIÊN</p>
+                </div>
+
+
+            </div>
+            <div class="header-right col-md-8">
+                <div class="header_menu_right">
+                    <nav class="menu">
+                        <a href="" class="item-menu">GIỚI THIỆU</a>
+                        <a href="" class="item-menu">ĐĂNG NHẬP</a>
+                        <a href="" class="item-menu">HƯỚNG DẪN SỬ DỤNG</a>
+                        <a href="" class="item-menu">LIÊN HỆ</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main style="position: relative">
+        <div class="container-fluid mt-5">
+            <h3 class="text-center text-white">THỜI KHÓA BIỂU CỦA SINH VIÊN</h3>
+            <div class="row justify-content-lg-around my-4">
+                <div class="form-left col-md-6">
+                    <form>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Mã SV/Họ tên">
+                            <div class="input-group-btn">
+                                <button class="btn btn-success" type="submit">
+                                    <i class="glyphicon glyphicon-search"></i>Tìm kiếm
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="form-right col-md-6">
+                    <div class="form-group">
+                        <select name="" id="" class="form-control">
+                            <option value="">Học kỳ 1, năm học 2021-2022</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- start widget -->
+            <div class="state-overview">
+                <div class="row" style="padding-left: 20px;">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="overview-panel limegreen" id="NhiemVu"
+                            style="background-color: purple; color: #fff;" idname="tranform-nhiemvu"
+                            onclick="ActiveDiv(this)">
+                            <div class="symbol">
+                                <i class="far fa-calendar" style="font-size: 50px;"></i>
+                            </div>
+                            <div class="value white">
+                                <p class="sbold addr-font-h1" data-counter="counterup" data-value="23">23</p><span>Số
+                                    tín chỉ đã học</span><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="overview-panel limegreen" id="NhiemVu"
+                            style="background-color:#589858; color: #fff;" idname="tranform-nhiemvu"
+                            onclick="ActiveDiv(this)">
+                            <div class="symbol">
+                                <i class="fa fa-tasks" style="font-size: 50px;"></i>
+                            </div>
+                            <div class="value white">
+                                <p class="sbold addr-font-h1" data-counter="counterup" data-value="68">68</p><span>Số
+                                    tín chỉ đã qua</span><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="overview-panel limegreen" id="NhiemVu" style="background-color:orange; color: #fff;"
+                            idname="tranform-nhiemvu" onclick="ActiveDiv(this)">
+                            <div class="symbol">
+                                <i class="far fa-folder-open" style="font-size: 50px;"></i>
+                            </div>
+                            <div class="value white">
+                                <p class="sbold addr-font-h1" data-counter="counterup" data-value="9">9</p><span>Số
+                                    tín chỉ còn nợ</span><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="overview-panel limegreen" id="NhiemVu" style="background-color: blue; color: #fff;"
+                            idname="tranform-nhiemvu" onclick="ActiveDiv(this)">
+                            <div class="symbol">
+                                <i class="far fa-envelope" style="font-size: 50px;"></i>
+                            </div>
+                            <div class="value white">
+                                <p class="sbold addr-font-h1" data-counter="counterup" data-value="34">34</p><span>Số
+                                    tín chỉ chưa học</span><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end widget -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card card-topline-gray" id="card-panel" style="padding: 10px; height: auto;">
+                        <div class="card-body no-padding height-9">
+                            <div class="inbox tranform-tacnghiep tranform-lich flip-custom hover" id="tranform-lich"
+                                style="backface-visibility:unset;">
+                                <div class="flipper">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="inbox-sidebar">
+                                                <div class="card">
+                                                    <div class="card-header" id="headingOne" style="background: #ccc;">
+                                                        <h3 class="mb-0">
+                                                            <button class="btn btn-link text-dark"
+                                                                data-toggle="collapse" data-target="#collapseOne"
+                                                                aria-expanded="true" aria-controls="collapseOne">
+                                                                <i class="fa fa-search"></i> <span
+                                                                    class="ml-5 text-uppercase"
+                                                                    style="font-size: 20px">Tra cứu thông tin</span>
+                                                            </button>
+                                                        </h3>
+                                                    </div>
+
+                                                    <div id="collapseOne" class="collapse show"
+                                                        aria-labelledby="headingOne" data-parent="#accordion">
+                                                        <div class="card-body">
+
+                                                            <div class="form-group">
+                                                                <input type="radio" name="chon-mot"> TKB Sinh viên
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input type="radio" name="chon-mot"> Lịch thi
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input type="radio" name="chon-mot"> Học phí trong kỳ
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input type="radio" name="chon-mot"> TKB Lớp học phần
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input type="radio" name="chon-mot"> TKB Lớp chuyên
+                                                                ngành
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input type="radio" name="chon-mot"> TKB Giảng viên
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input type="radio" name="chon-mot"> TKB Đơn vị
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input type="radio" name="chon-mot"> Lịch sử dụng phòng
+                                                                học
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input type="radio" name="chon-mot"> Lịch giảng dạy
+                                                                trong ngày
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <table class="table table-bordered text-center">
+                                                <thead>
+                                                    <tr>
+                                                        <td>STT</td>
+                                                        <td>Học phần</td>
+                                                        <td>Số TC</td>
+                                                        <td>Nhóm</td>
+                                                        <td>Thứ</td>
+                                                        <td>Tiết</td>
+                                                        <td>Giảng đường</td>
+                                                        <td>Ngôn ngữ giảng dạy</td>
+                                                        <td>Giảng viên</td>
+                                                        <td>Học hàm/học vị</td>
+                                                        <td>Số điện thoại</td>
+                                                        <td>Ghi chú</td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Kỹ năng giao tiếp</td>
+                                                        <td>3</td>
+                                                        <td>2</td>
+                                                        <td>2</td>
+                                                        <td>1-4</td>
+                                                        <td>401 Y1</td>
+                                                        <td>Tiếng Việt</td>
+                                                        <td>Ngô Xuân Khoa</td>
+                                                        <td>PGS TS</td>
+                                                        <td>0911123435</td>
+                                                        <td>Thực hành</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Dịch vụ hành chính công</td>
+                                                        <td>4</td>
+                                                        <td>2</td>
+                                                        <td>2</td>
+                                                        <td>1-4</td>
+                                                        <td>401 Y1</td>
+                                                        <td>Tiếng Việt</td>
+                                                        <td>Nguyễn Văn Thức</td>
+                                                        <td>TS</td>
+                                                        <td>0911123435</td>
+                                                        <td>Lý thuyết</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>Triết học Mac-Lênin</td>
+                                                        <td>5</td>
+                                                        <td>2</td>
+                                                        <td>2</td>
+                                                        <td>1-4</td>
+                                                        <td>401 Y1</td>
+                                                        <td>Tiếng Việt</td>
+                                                        <td>Nguyễn Thúy Vân</td>
+                                                        <td>PGS TS</td>
+                                                        <td>0911123435</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>Toán cao cấp</td>
+                                                        <td>5</td>
+                                                        <td>2</td>
+                                                        <td>2</td>
+                                                        <td>1-4</td>
+                                                        <td>401 Y1</td>
+                                                        <td>Tiếng Việt</td>
+                                                        <td>Ninh Thị Thu</td>
+                                                        <td>ThS</td>
+                                                        <td>0911123435</td>
+                                                        <td>Lý thuyết</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>Cơ sở vật lý</td>
+                                                        <td>5</td>
+                                                        <td>2</td>
+                                                        <td>2</td>
+                                                        <td>1-4</td>
+                                                        <td>401 Y1</td>
+                                                        <td>Tiếng Việt</td>
+                                                        <td>Phùng Quốc Bảo</td>
+                                                        <td>PGS TS</td>
+                                                        <td>0911123435</td>
+                                                        <td>Lý thuyết</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+</body>
+
+</html>

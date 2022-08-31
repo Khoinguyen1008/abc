@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html class=" FB_FW_ext DispatcherPlugin">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HỌC LIỆU ĐIỆN TỬ</title>
+
+    <link href="assets/font_css.css" rel="stylesheet">
+    <link href="assets/icon.css" rel="stylesheet">
+    <link href="assets/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/bootstrap-custom.css" rel="stylesheet">
+    <link href="assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/main-style.css" rel="stylesheet">
+    
+    <link href="assets/ss-component.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link href="assets/style.css" rel="stylesheet">
+    <link href="assets/comment.css" rel="stylesheet">
+    <link href="assets/SimpleStarRating.css" rel="stylesheet">
+    <link href="assets/toastr.min.css" rel="stylesheet">
+    <link href="assets/loading-bar.min.css" rel="stylesheet">
+
+    <link href="assets/menu_common.css" rel="stylesheet">
+    <link href="assets/detail.css" rel="stylesheet">
+    <script>
+        $(document).ready(function () {
+            $('.ss-detail-top-search').removeClass('top-search-fixed');
+            //Add class fixed-top
+            $(window).scroll(function () {
+                if ($('html').scrollTop() > 121) {
+                    $('.ss-detail-top-search').addClass('top-search-fixed');
+                }
+                else {
+                    $('.ss-detail-top-search').removeClass('top-search-fixed');
+                }
+            });
+        });
+    </script>
+<style> @-webkit-keyframes loadingoverlay_animation__rotate_right { to { -webkit-transform : rotate(360deg); transform : rotate(360deg); } } @keyframes loadingoverlay_animation__rotate_right { to { -webkit-transform : rotate(360deg); transform : rotate(360deg); } } @-webkit-keyframes loadingoverlay_animation__rotate_left { to { -webkit-transform : rotate(-360deg); transform : rotate(-360deg); } } @keyframes loadingoverlay_animation__rotate_left { to { -webkit-transform : rotate(-360deg); transform : rotate(-360deg); } } @-webkit-keyframes loadingoverlay_animation__fadein { 0% { opacity   : 0; -webkit-transform : scale(0.1, 0.1); transform : scale(0.1, 0.1); } 50% { opacity   : 1; } 100% { opacity   : 0; -webkit-transform : scale(1, 1); transform : scale(1, 1); } } @keyframes loadingoverlay_animation__fadein { 0% { opacity   : 0; -webkit-transform : scale(0.1, 0.1); transform : scale(0.1, 0.1); } 50% { opacity   : 1; } 100% { opacity   : 0; -webkit-transform : scale(1, 1); transform : scale(1, 1); } } @-webkit-keyframes loadingoverlay_animation__pulse { 0% { -webkit-transform : scale(0, 0); transform : scale(0, 0); } 50% { -webkit-transform : scale(1, 1); transform : scale(1, 1); } 100% { -webkit-transform : scale(0, 0); transform : scale(0, 0); } } @keyframes loadingoverlay_animation__pulse { 0% { -webkit-transform : scale(0, 0); transform : scale(0, 0); } 50% { -webkit-transform : scale(1, 1); transform : scale(1, 1); } 100% { -webkit-transform : scale(0, 0); transform : scale(0, 0); } } </style></head>
+
+<body>
+<div ng-app="smartschool_home" ng-controller="rootController" class="ng-scope">
+    <!-- uiView: --><div ui-view="" class="ng-scope"><div class="ss-detail-header ng-scope">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <!-- ngRepeat: item in curentUser.Positions --><ul class="ss-detail-header-info ng-scope" ng-repeat="item in curentUser.Positions">
+                    <li>
+                        <a href="javascript:void(0)" class="ng-binding"><i class="material-icons">person</i>teacher</a>
+                        <ul class="user-list">
+                            <!-- ngIf: curentUser.checkPer == '1' -->
+                            <li>
+                                <a href="http://smartschool.vn/smartschool#!/profile" target="_blank">Quản lý thông tin</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" ng-click="logOutHome()">Đăng xuất</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul><!-- end ngRepeat: item in curentUser.Positions -->
+            </div>
+        </div><!--END row-->
+    </div><!--END container-->
+</div><!--END ss-detail-header-->
+
+<div class="ng-scope">
+    <!-- uiView: --><div ui-view="" class="ng-scope"><link href="assets/store.css" rel="stylesheet" class="ng-scope">
+
+<div class="ss-detail-top-menu ng-scope">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-6 col-md-4">
+                <a ui-sref="home" class="ss-detail-top-logo" href="#">
+                   <!--  <img src="assets/ss-logo-black.png" alt="Smartschool Logo"> -->
+                   <h5>HỌC LIỆU ĐIỆN TỬ - ĐẠI HỌC NỘI VỤ</h5>
+                </a>
+            </div>
+            <div class="col-6 col-md-8">
+
+                <div class="nav-detail-menu" style="visibility: visible;">
+                    <ul>
+                        <!-- ngRepeat: item in curentUser.Menus -->
+                        <li ng-repeat="item in curentUser.Menus" class="ng-scope">
+                            <a href="#" class="ng-binding">
+                            Học liệu điện tử bài giảng mẫu 
+                            <!-- ngIf: item.children.length > 0 -->
+                                
+                            </a>
+                            <!-- ngIf: item.children.length > 0 -->
+                        </li>
+                        <!-- end ngRepeat: item in curentUser.Menus -->
+                        <li ng-repeat="item in curentUser.Menus" class="ng-scope">
+                            <a href="#" class="ng-binding">
+                            Học tập trực tuyến 
+                            <!-- ngIf: item.children.length > 0 -->
+                            <span ng-if="item.children.length &gt; 0" class="openSubmenu ng-scope"></span>
+                            <!-- end ngIf: item.children.length > 0 --></a>
+                            <!-- ngIf: item.children.length > 0 -->
+                           
+                        </li><!-- end ngRepeat: item in curentUser.Menus -->
+                        <li ng-repeat="item in curentUser.Menus" class="ng-scope">
+                            <a href="#" class="ng-binding">
+                            SGK điện tử <!-- ngIf: item.children.length > 0 --></a>
+                            <!-- ngIf: item.children.length > 0 -->
+                        </li><!-- end ngRepeat: item in curentUser.Menus -->
+                        <li ng-repeat="item in curentUser.Menus" class="ng-scope">
+                            <a href="#" class="ng-binding">
+                            SGK Tiếng Anh <!-- ngIf: item.children.length > 0 --></a>
+                            <!-- ngIf: item.children.length > 0 -->
+                        </li><!-- end ngRepeat: item in curentUser.Menus -->
+                        <li ng-repeat="item in curentUser.Menus" class="ng-scope">
+                            <a href="#" class="ng-binding">
+                            Học liệu Khoa học 3D <!-- ngIf: item.children.length > 0 --></a>
+                            <!-- ngIf: item.children.length > 0 -->
+                        </li><!-- end ngRepeat: item in curentUser.Menus -->
+                        <li ng-repeat="item in curentUser.Menus" class="ng-scope">
+                            <a href="#" class="ng-binding">
+                            Học liệu truyền hình <!-- ngIf: item.children.length > 0 --></a>
+                            <!-- ngIf: item.children.length > 0 -->
+                        </li><!-- end ngRepeat: item in curentUser.Menus -->
+                        <li ng-repeat="item in curentUser.Menus" class="ng-scope">
+                            <a href="#" class="ng-binding">
+                            Video thực hành thí nghiệm <!-- ngIf: item.children.length > 0 --></a>
+                            <!-- ngIf: item.children.length > 0 -->
+                        </li><!-- end ngRepeat: item in curentUser.Menus -->
+                    </ul>
+
+                    <span class="btn-nav-detail-menu-no-scroll"><i class="material-icons">menu</i></span>
+                </div>
+            </div>
+        </div><!--END row-->
+    </div><!--END container-->
+</div><!--END ss-detail-top-menu-->
+
+<div class="ss-detail-top-search ng-scope top-search-fixed">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-2 logo-scroll">
+                <a ui-sref="home" href="index.html">
+                     <h6 style="color: #fff">HỌC LIỆU ĐIỆN TỬ</h6>
+                </a>
+            </div>
+            <div class="col-6 col-md-7">
+                <div class="ss-detail-top-search-input">
+                    <input type="text" id="key-word" ng-click="eventEnter()" ng-model="keyword" placeholder="Nhập nội dung tìm kiếm" class="ng-pristine ng-untouched ng-valid ng-empty"><i class="material-icons">search</i>
+                </div>
+            </div>
+            <div class="col-4 col-md-2">
+                <div class="ss-detail-top-search-btn">
+                    <a href="javascript:void(0)" ng-click="search()"><span>Tìm kiếm</span><i class="material-icons">send</i></a>
+                </div>
+            </div>
+            <div class="col-md-1 dt-menu-scroll">
+                <div class="nav-detail-menu">
+                    <ul>
+                        <!-- ngRepeat: item in curentUser.Menus --><li ng-repeat="item in curentUser.Menus" class="ng-scope"><a href="#" class="ng-binding">
+                            Học liệu điện tử bài giảng mẫu <!-- ngIf: item.children.length > 0 --></a>
+                            <!-- ngIf: item.children.length > 0 -->
+                        </li><!-- end ngRepeat: item in curentUser.Menus --><li ng-repeat="item in curentUser.Menus" class="ng-scope"><a href="#" class="ng-binding">
+                            Học tập trực tuyến <!-- ngIf: item.children.length > 0 --><span ng-if="item.children.length &gt; 0" class="openSubmenu ng-scope"></span><!-- end ngIf: item.children.length > 0 --></a>
+                            <!-- ngIf: item.children.length > 0 -->
+                        </li><!-- end ngRepeat: item in curentUser.Menus --><li ng-repeat="item in curentUser.Menus" class="ng-scope"><a href="#" class="ng-binding">
+                            SGK điện tử <!-- ngIf: item.children.length > 0 --></a>
+                            <!-- ngIf: item.children.length > 0 -->
+                        </li><!-- end ngRepeat: item in curentUser.Menus --><li ng-repeat="item in curentUser.Menus" class="ng-scope"><a href="#" class="ng-binding">
+                            SGK Tiếng Anh <!-- ngIf: item.children.length > 0 --></a>
+                            <!-- ngIf: item.children.length > 0 -->
+                        </li><!-- end ngRepeat: item in curentUser.Menus --><li ng-repeat="item in curentUser.Menus" class="ng-scope"><a href="#" class="ng-binding">
+                            Học liệu Khoa học 3D <!-- ngIf: item.children.length > 0 --></a>
+                            <!-- ngIf: item.children.length > 0 -->
+                        </li><!-- end ngRepeat: item in curentUser.Menus --><li ng-repeat="item in curentUser.Menus" class="ng-scope"><a href="#" class="ng-binding">
+                            Học liệu truyền hình <!-- ngIf: item.children.length > 0 --></a>
+                            <!-- ngIf: item.children.length > 0 -->
+                        </li><!-- end ngRepeat: item in curentUser.Menus --><li ng-repeat="item in curentUser.Menus" class="ng-scope"><a href="#" class="ng-binding">
+                            Video thực hành thí nghiệm <!-- ngIf: item.children.length > 0 --></a>
+                            <!-- ngIf: item.children.length > 0 -->
+                        </li><!-- end ngRepeat: item in curentUser.Menus -->
+                    </ul>
+                    <span class="btn-nav-detail-menu"><i class="material-icons">menu</i></span>
+                </div>
+            </div>
+        </div><!--END row-->
+
+    </div><!--END container-->
+</div><!--END ss-detail-top-search-->
+
+<div class="ss-detail-content detail-store ng-scope">
+    <div class="container">
+        <div class="ss-content">
+            <div class="row">
+                <div class="col-sm-3 order-2 order-md-1">
+                    <div class="ss-cate-filter">
+                        <a href="#" class="btn-treeview" style="color:#ffffff;">
+                            Cây thư mục
+                        </a>
+
+                    </div><!--END ss-cate-filter-->
+                   
+                    <div class="ss-cate-filter">
+                        <h4 class="ss-tit-line-h4">Bộ môn
+                            <i class="material-icons i-remove" id="s-remove" ng-click="expandSubject()">remove</i>
+                            <i class="material-icons i-add" id="s-add" ng-click="showSubject()">add</i>
+                        </h4>
+                        <!-- ngRepeat: sub in subjects --><ul ng-repeat="sub in subjects" class="ng-scope">
+                            <li ng-click="ChooseSubject($event,sub.id)" ng-model="subject_id" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                <input type="checkbox" ng-checked="objSub_id" class="ss-input-checkbox">
+                                <span class="ss-checkmark"></span>
+                                <span class="ss-cate-check ng-binding">Tài liệu Hành chính học</span>
+                            </li>
+                        </ul><!-- end ngRepeat: sub in subjects --><ul ng-repeat="sub in subjects" class="ng-scope">
+                            <li ng-click="ChooseSubject($event,sub.id)" ng-model="subject_id" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                <input type="checkbox" ng-checked="objSub_id" class="ss-input-checkbox">
+                                <span class="ss-checkmark"></span>
+                                <span class="ss-cate-check ng-binding">Tài liệu Quản trị văn phòng</span>
+                            </li>
+                        </ul><!-- end ngRepeat: sub in subjects --><ul ng-repeat="sub in subjects" class="ng-scope">
+                            <li ng-click="ChooseSubject($event,sub.id)" ng-model="subject_id" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                <input type="checkbox" ng-checked="objSub_id" class="ss-input-checkbox">
+                                <span class="ss-checkmark"></span>
+                                <span class="ss-cate-check ng-binding">Tài liệu quản lý xã hội</span>
+                            </li>
+                        </ul><!-- end ngRepeat: sub in subjects --><ul ng-repeat="sub in subjects" class="ng-scope">
+                            <li ng-click="ChooseSubject($event,sub.id)" ng-model="subject_id" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                <input type="checkbox" ng-checked="objSub_id" class="ss-input-checkbox">
+                                <span class="ss-checkmark"></span>
+                                <span class="ss-cate-check ng-binding">Quản trị kinh doanh</span>
+                            </li>
+                        </ul><!-- end ngRepeat: sub in subjects --><ul ng-repeat="sub in subjects" class="ng-scope">
+                            <li ng-click="ChooseSubject($event,sub.id)" ng-model="subject_id" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                <input type="checkbox" ng-checked="objSub_id" class="ss-input-checkbox">
+                                <span class="ss-checkmark"></span>
+                                <span class="ss-cate-check ng-binding">Tài liệu Tiếng anh</span>
+                            </li>
+                        </ul><!-- end ngRepeat: sub in subjects --><ul ng-repeat="sub in subjects" class="ng-scope">
+                            <li ng-click="ChooseSubject($event,sub.id)" ng-model="subject_id" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                <input type="checkbox" ng-checked="objSub_id" class="ss-input-checkbox">
+                                <span class="ss-checkmark"></span>
+                                <span class="ss-cate-check ng-binding">Tài liệu Luật</span>
+                            </li>
+                        </ul><!-- end ngRepeat: sub in subjects --><ul ng-repeat="sub in subjects" class="ng-scope">
+                            <li ng-click="ChooseSubject($event,sub.id)" ng-model="subject_id" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                <input type="checkbox" ng-checked="objSub_id" class="ss-input-checkbox">
+                                <span class="ss-checkmark"></span>
+                                <span class="ss-cate-check ng-binding">Tài liệu CNTT</span>
+                            </li>
+                        </ul><!-- end ngRepeat: sub in subjects --><ul ng-repeat="sub in subjects" class="ng-scope">
+                            <li ng-click="ChooseSubject($event,sub.id)" ng-model="subject_id" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                <input type="checkbox" ng-checked="objSub_id" class="ss-input-checkbox">
+                                <span class="ss-checkmark"></span>
+                                <span class="ss-cate-check ng-binding">Sách văn học</span>
+                            </li>
+                        </ul><!-- end ngRepeat: sub in subjects --><ul ng-repeat="sub in subjects" class="ng-scope">
+                            <li ng-click="ChooseSubject($event,sub.id)" ng-model="subject_id" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                <input type="checkbox" ng-checked="objSub_id" class="ss-input-checkbox">
+                                <span class="ss-checkmark"></span>
+                                <span class="ss-cate-check ng-binding">Sách Xã hội</span>
+                            </li>
+                        </ul><!-- end ngRepeat: sub in subjects --><ul ng-repeat="sub in subjects" class="ng-scope">
+                            <li ng-click="ChooseSubject($event,sub.id)" ng-model="subject_id" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                <input type="checkbox" ng-checked="objSub_id" class="ss-input-checkbox">
+                                <span class="ss-checkmark"></span>
+                                <span class="ss-cate-check ng-binding">Các tài liệu liên ngành</span>
+                            </li>
+                        </ul><!-- end ngRepeat: sub in subjects -->
+                        <div class="show-all-subject"><a href="javascript:void(0)" ng-click="showAllSubject()">
+                            Tất cả </a></div>
+                        <div class="hide-subject"><a href="javascript:void(0)" ng-click="hideSubject()">Thu gọn</a>
+                        </div>
+                    </div><!--END ss-cate-filter-->
+                    <div class="ss-cate-filter">
+                        <h4 class="ss-tit-line-h4">Định dạng dữ liệu
+                            <i class="material-icons i-remove" id="t-remove" ng-click="expandType()">remove</i>
+                            <i class="material-icons i-add" id="t-add" ng-click="showType()">add</i>
+                        </h4>
+                        <!-- ngRepeat: t in types --><ul ng-repeat="t in types" class="ng-scope">
+                            <li ng-click="ChooseType($event,t.id)" ng-model="type" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                <input type="checkbox" ng-checked="objType" class="ss-input-checkbox"><span class="ss-checkmark"></span>
+                                <span class="ss-cate-check ng-binding">ZIP</span>
+                            </li>
+                        </ul><!-- end ngRepeat: t in types --><ul ng-repeat="t in types" class="ng-scope">
+                            <li ng-click="ChooseType($event,t.id)" ng-model="type" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                <input type="checkbox" ng-checked="objType" class="ss-input-checkbox"><span class="ss-checkmark"></span>
+                                <span class="ss-cate-check ng-binding">Flash</span>
+                            </li>
+                        </ul><!-- end ngRepeat: t in types --><ul ng-repeat="t in types" class="ng-scope">
+                            <li ng-click="ChooseType($event,t.id)" ng-model="type" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                <input type="checkbox" ng-checked="objType" class="ss-input-checkbox"><span class="ss-checkmark"></span>
+                                <span class="ss-cate-check ng-binding">PPT</span>
+                            </li>
+                        </ul><!-- end ngRepeat: t in types --><ul ng-repeat="t in types" class="ng-scope">
+                            <li ng-click="ChooseType($event,t.id)" ng-model="type" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                <input type="checkbox" ng-checked="objType" class="ss-input-checkbox"><span class="ss-checkmark"></span>
+                                <span class="ss-cate-check ng-binding">Video</span>
+                            </li>
+                        </ul><!-- end ngRepeat: t in types -->
+                    </div><!--END ss-cate-filter-->
+                    <div class="ss-cate-filter">
+                        <h4 class="ss-tit-line-h4">Thể loại
+                            <i class="material-icons i-remove" id="l-remove" ng-click="expandLesson()">remove</i>
+                            <i class="material-icons i-add" id="l-add" ng-click="showLesson()">add</i>
+                        </h4>
+                        <!-- ngRepeat: ls in lessonTypes --><ul ng-repeat="ls in lessonTypes" class="ng-scope">
+                            <li ng-click="ChooseLesson($event,ls.id)" ng-model="lesson" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                <input type="checkbox" ng-checked="objLesson" class="ss-input-checkbox"><span class="ss-checkmark"></span>
+                                <span class="ss-cate-check ng-binding">Bài giảng</span>
+                            </li>
+                        </ul><!-- end ngRepeat: ls in lessonTypes --><ul ng-repeat="ls in lessonTypes" class="ng-scope">
+                            <li ng-click="ChooseLesson($event,ls.id)" ng-model="lesson" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                <input type="checkbox" ng-checked="objLesson" class="ss-input-checkbox"><span class="ss-checkmark"></span>
+                                <span class="ss-cate-check ng-binding">Video bài giảng</span>
+                            </li>
+                        </ul><!-- end ngRepeat: ls in lessonTypes --><ul ng-repeat="ls in lessonTypes" class="ng-scope">
+                            <li ng-click="ChooseLesson($event,ls.id)" ng-model="lesson" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                <input type="checkbox" ng-checked="objLesson" class="ss-input-checkbox"><span class="ss-checkmark"></span>
+                                <span class="ss-cate-check ng-binding">Học liệu bổ trợ</span>
+                            </li>
+                        </ul><!-- end ngRepeat: ls in lessonTypes --><ul ng-repeat="ls in lessonTypes" class="ng-scope">
+                            <li ng-click="ChooseLesson($event,ls.id)" ng-model="lesson" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                <input type="checkbox" ng-checked="objLesson" class="ss-input-checkbox"><span class="ss-checkmark"></span>
+                                <span class="ss-cate-check ng-binding">Bài giảng video</span>
+                            </li>
+                        </ul><!-- end ngRepeat: ls in lessonTypes --><ul ng-repeat="ls in lessonTypes" class="ng-scope">
+                            <li ng-click="ChooseLesson($event,ls.id)" ng-model="lesson" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                <input type="checkbox" ng-checked="objLesson" class="ss-input-checkbox"><span class="ss-checkmark"></span>
+                                <span class="ss-cate-check ng-binding">Video thí nghiệm</span>
+                            </li>
+                        </ul><!-- end ngRepeat: ls in lessonTypes -->
+                        <div class="show-all-lesson"><a href="javascript:void(0)" ng-click="showAllLesson()">
+                            Tất cả </a></div>
+                        <div class="hide-lesson"><a href="javascript:void(0)" ng-click="hideLesson()">Thu gọn</a>
+                        </div>
+                    </div><!--END ss-cate-filter-->
+                </div>
+
+                <div class="col-sm-9 order-1 order-md-2" style="margin-top: -3px;">
+
+                    <div class="ss-list-product">
+                        <div class="row" id="div-result-search" style="display: none;">
+                            <div class="col-sm-12">
+                                <div class="ss-login-recent-search">
+                                    <ul>
+                                        <li id="li-result">Tìm thấy 1000 kết quả</li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="ss-login-recent-search">
+                                    <ul>
+                                        <!-- ngRepeat: key in searchkeys -->
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-3 ng-scope" style="margin-bottom: 30px;" ng-repeat="item in products">
+                                <a href="vid5.html">
+                                </a>
+                                <div class="list-product-info"><a href="vid5.html">
+                                        <div class="list-product-info-thumb">
+                                            <div class="product-info-thumb-icons" ng-mouseover="hoverIn(item.id,item.extension)">
+                                                <!-- ngIf: item.product_type=='2' -->
+                                                <!-- ngIf: item.product_type=='1' -->
+                                                <!-- ngIf: item.product_type=='4' -->
+                                                <img ng-if="item.product_type==&#39;4&#39;" src="assets/ss-ic-product-tag-video-white.svg" alt="" class="ng-scope"><!-- end ngIf: item.product_type=='4' -->
+
+                                                <!-- ngIf: item.product_type=='3' -->
+                                            </div>
+                                            <img ng-src="/upload/img/nhh_hl3d_60/thumb.png" alt="" class="product-info-thumb-img" src="assets/img/nv/1.PNG">
+                                        </div>
+                                        </a><a ui-sref="product({alias:item.product_alias})" class="product-info-cate ng-binding" href="vid5.html">Giới thiệu các ngành đào tạo bậc Đại học tại Đại học Nội vụ Hà Nội</a>
+                                       <!--  <a ui-sref="product({alias:item.product_alias})" class="ss-product-tit ng-binding" href="chitiet.html">Bộ môn Sinh lý bệnh</a> -->
+                                        <div class="product-info-tag">
+                                            <a ui-sref="product({alias:item.product_alias})" class="product-info-cate ng-binding" href="vid5.html">Video</a>
+
+                                            <a ui-sref="product({alias:item.product_alias})" class="ss-btn-flat-gra-orange ng-binding" href="vid5.html">Miễn phí</a>
+                                        </div>
+                                        <div class="product-rate">
+                                            <!--<span>Đánh giá:</span>-->
+                                            <div class="rate-star"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_border</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+
+                                <form ng-show="item.isOutSystem==&#39;1&#39;" id="ltiLaunchForm-35270" name="ltiLaunchForm" method="POST" action="http://smartschool.vn/upload/datas/nhh_hl3d_60/nhh_hl3d_60.mp4" enctype="application/x-www-form-urlencoded" target="_blank" class="ng-pristine ng-valid ng-hide">
+
+                                    <!--tich hop LTI cua TimeToKnow-->
+                                    <!-- ngRepeat: (key, value) in item.launch_data -->
+                                    <input type="hidden" name="oauth_signature" value="" autocomplete="off">
+
+
+                                    <div ng-show="item.isOutSystem==&#39;1&#39;" class="list-product-info ng-hide">
+
+                                        <div class="list-product-info-thumb">
+                                            <div class="product-info-thumb-icons">
+                                                <img src="assets/t2k_bn.png" alt="">
+                                            </div>
+                                            <img ng-src="/upload/img/nhh_hl3d_60/thumb.png" alt="Axit Cacboxylic" class="product-info-thumb-img" src="assets/img/nv/2.PNG">
+                                        </div>
+                                        <a href="javascript:void(0);" class="product-info-cate ng-binding">Review Đại Học Nội Vụ</a>
+                                       <!--  <a href="javascript:void(0);" class="ss-product-tit ng-binding">Bộ môn Giải phẫu</a> -->
+                                        <div class="product-info-tag">
+                                            <a href="javascript:void(0);" class="product-info-cate ng-binding">Video</a>
+
+                                            <a href="javascript:void(0);" class="ss-btn-flat-gra-orange">Miễn phí</a>
+                                        </div>
+                                        <div class="product-rate">
+                                            <!--<span>Đánh giá:</span>-->
+                                            <div class="rate-star"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_border</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+
+
+                            </div><!-- end ngRepeat: item in products --><div class="col-sm-3 ng-scope" style="margin-bottom: 30px;" ng-repeat="item in products">
+                                <a href="vid6.html">
+                                    </a><div class="list-product-info"><a href="vid6.html">
+                                        <div class="list-product-info-thumb">
+                                            <div class="product-info-thumb-icons" ng-mouseover="hoverIn(item.id,item.extension)">
+                                                <!-- ngIf: item.product_type=='2' -->
+                                                <!-- ngIf: item.product_type=='1' -->
+                                                <!-- ngIf: item.product_type=='4' --><img ng-if="item.product_type==&#39;4&#39;" src="assets/ss-ic-product-tag-video-white.svg" alt="" class="ng-scope"><!-- end ngIf: item.product_type=='4' -->
+
+                                                <!-- ngIf: item.product_type=='3' -->
+                                            </div>
+                                            <img ng-src="/upload/img/nhh_hl3d_59/thumb.png" alt="" class="product-info-thumb-img" src="assets/img/nv/3.PNG">
+                                        </div>
+                                        </a><a ui-sref="product({alias:item.product_alias})" class="product-info-cate ng-binding" href="vid6.html">Trường Đại học Nội vụ Hà Nội - Đổi mới trong kỷ nguyên công nghệ số</a>
+                                     <!--    <a ui-sref="product({alias:item.product_alias})" class="ss-product-tit ng-binding" href="chitiet2.html">Bộ môn Giải phẫu</a> -->
+                                        <div class="product-info-tag">
+                                            <a ui-sref="product({alias:item.product_alias})" class="product-info-cate ng-binding" href="vid6.html">Video</a>
+
+                                            <a ui-sref="product({alias:item.product_alias})" class="ss-btn-flat-gra-orange ng-binding" href="vid6.html">Miễn phí</a>
+                                        </div>
+                                        <div class="product-rate">
+                                            <!--<span>Đánh giá:</span>-->
+                                            <div class="rate-star"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_border</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+
+                                <form ng-show="item.isOutSystem==&#39;1&#39;" id="ltiLaunchForm-35269" name="ltiLaunchForm" method="POST" action="http://smartschool.vn/upload/datas/nhh_hl3d_59/nhh_hl3d_59.mp4" enctype="application/x-www-form-urlencoded" target="_blank" class="ng-pristine ng-valid ng-hide">
+
+                                    <!--tich hop LTI cua TimeToKnow-->
+                                    <!-- ngRepeat: (key, value) in item.launch_data -->
+                                    <input type="hidden" name="oauth_signature" value="" autocomplete="off">
+
+
+                                    <div ng-show="item.isOutSystem==&#39;1&#39;" class="list-product-info ng-hide">
+
+                                        <div class="list-product-info-thumb">
+                                            <div class="product-info-thumb-icons">
+                                                <img src="assets/t2k_bn.png" alt="">
+                                            </div>
+                                            <img ng-src="/upload/img/nhh_hl3d_59/thumb.png" alt="Cacbohidrat" class="product-info-thumb-img" src="assets/img/nv/1.PNG">
+                                        </div>
+                                        <a href="javascript:void(0);" class="product-info-cate ng-binding">Trường Đại học Nội vụ Hà Nội - 3 ngành đào tạo bậc Đại học mới</a>
+                                        <!-- <a href="javascript:void(0);" class="ss-product-tit ng-binding">Bộ môn Miễn dịch</a> -->
+                                        <div class="product-info-tag">
+                                            <a href="javascript:void(0);" class="product-info-cate ng-binding">Video</a>
+
+                                            <a href="javascript:void(0);" class="ss-btn-flat-gra-orange">Miễn phí</a>
+                                        </div>
+                                        <div class="product-rate">
+                                            <!--<span>Đánh giá:</span>-->
+                                            <div class="rate-star"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_border</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+
+
+                            </div><!-- end ngRepeat: item in products --><div class="col-sm-3 ng-scope" style="margin-bottom: 30px;" ng-repeat="item in products">
+                                <a href="vid7.html">
+                                    </a><div class="list-product-info"><a href="vid7.html">
+                                        <div class="list-product-info-thumb">
+                                            <div class="product-info-thumb-icons" ng-mouseover="hoverIn(item.id,item.extension)">
+                                                <!-- ngIf: item.product_type=='2' -->
+                                                <!-- ngIf: item.product_type=='1' -->
+                                                <!-- ngIf: item.product_type=='4' --><img ng-if="item.product_type==&#39;4&#39;" src="assets/ss-ic-product-tag-video-white.svg" alt="" class="ng-scope"><!-- end ngIf: item.product_type=='4' -->
+
+                                                <!-- ngIf: item.product_type=='3' -->
+                                            </div>
+                                            <img ng-src="/upload/img/nhh_hl3d_58/thumb.png" alt="" class="product-info-thumb-img" src="assets/img/nv/4.PNG">
+                                        </div>
+                                        </a><a ui-sref="product({alias:item.product_alias})" class="product-info-cate ng-binding" href="vid7.html">Luật hành chính: Quy phạm pháp luật hành chính</a>
+                                        <!-- <a ui-sref="product({alias:item.product_alias})" class="ss-product-tit ng-binding" href="#">Bộ môn Phẫu thuật Thực hành</a> -->
+                                        <div class="product-info-tag">
+                                            <a ui-sref="product({alias:item.product_alias})" class="product-info-cate ng-binding" href="vid7.html">Học liệu khoa học</a>
+
+                                            <a ui-sref="product({alias:item.product_alias})" class="ss-btn-flat-gra-orange ng-binding" href="vid7.html">Miễn phí</a>
+                                        </div>
+                                        <div class="product-rate">
+                                            <!--<span>Đánh giá:</span>-->
+                                            <div class="rate-star"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_border</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+
+                                <form ng-show="item.isOutSystem==&#39;1&#39;" id="ltiLaunchForm-35268" name="ltiLaunchForm" method="POST" action="http://smartschool.vn/upload/datas/nhh_hl3d_58/nhh_hl3d_58.mp4" enctype="application/x-www-form-urlencoded" target="_blank" class="ng-pristine ng-valid ng-hide">
+
+                                    <!--tich hop LTI cua TimeToKnow-->
+                                    <!-- ngRepeat: (key, value) in item.launch_data -->
+                                    <input type="hidden" name="oauth_signature" value="" autocomplete="off">
+
+
+                                    <div ng-show="item.isOutSystem==&#39;1&#39;" class="list-product-info ng-hide">
+
+                                        <div class="list-product-info-thumb">
+                                            <div class="product-info-thumb-icons">
+                                                <img src="assets/t2k_bn.png" alt="">
+                                            </div>
+                                            <img ng-src="/upload/img/nhh_hl3d_58/thumb.png" alt="Bộ môn Phẫu thuật Thực hành" class="product-info-thumb-img" src="assets/img/nv/5.PNG">
+                                        </div>
+                                        <a href="javascript:void(0);" class="product-info-cate ng-binding">Luật hành chính: Địa vị pháp lý hành chính của cơ quan hành chính nhà nước</a>
+                                        <!-- <a href="javascript:void(0);" class="ss-product-tit ng-binding">Bộ môn Phẫu thuật Thực hành</a> -->
+                                        <div class="product-info-tag">
+                                            <a href="javascript:void(0);" class="product-info-cate ng-binding">Video</a>
+
+                                            <a href="javascript:void(0);" class="ss-btn-flat-gra-orange">Miễn phí</a>
+                                        </div>
+                                        <div class="product-rate">
+                                            <!--<span>Đánh giá:</span>-->
+                                            <div class="rate-star"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_border</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+
+
+                            </div><!-- end ngRepeat: item in products --><div class="col-sm-3 ng-scope" style="margin-bottom: 30px;" ng-repeat="item in products">
+                                <a href="vid8.html">
+                                    </a><div class="list-product-info"><a href="vid8.html">
+                                        <div class="list-product-info-thumb">
+                                            <div class="product-info-thumb-icons" ng-mouseover="hoverIn(item.id,item.extension)">
+                                                <!-- ngIf: item.product_type=='2' -->
+                                                <!-- ngIf: item.product_type=='1' -->
+                                                <!-- ngIf: item.product_type=='4' --><img ng-if="item.product_type==&#39;4&#39;" src="assets/ss-ic-product-tag-video-white.svg" alt="" class="ng-scope"><!-- end ngIf: item.product_type=='4' -->
+
+                                                <!-- ngIf: item.product_type=='3' -->
+                                            </div>
+                                            <img ng-src="/upload/img/nhh_hl3d_56/thumb.png" alt="" class="product-info-thumb-img" src="assets/img/nv/6.PNG">
+                                        </div>
+                                        </a><a ui-sref="product({alias:item.product_alias})" class="product-info-cate ng-binding" href="vid8.html">Luật hành chính: Thủ tục hành chính</a>
+                                        <!-- <a ui-sref="product({alias:item.product_alias})" class="ss-product-tit ng-binding" href="#">Bộ môn Sinh lý Lao động</a> -->
+                                        <div class="product-info-tag">
+                                            <a ui-sref="product({alias:item.product_alias})" class="product-info-cate ng-binding" href="vid8.html">Video</a>
+
+                                            <a ui-sref="product({alias:item.product_alias})" class="ss-btn-flat-gra-orange ng-binding" href="vid8.html">Miễn phí</a>
+                                        </div>
+                                        <div class="product-rate">
+                                            <!--<span>Đánh giá:</span>-->
+                                            <div class="rate-star"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_border</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+
+                                <form ng-show="item.isOutSystem==&#39;1&#39;" id="ltiLaunchForm-35266" name="ltiLaunchForm" method="POST" action="http://smartschool.vn/upload/datas/nhh_hl3d_56/nhh_hl3d_56.mp4" enctype="application/x-www-form-urlencoded" target="_blank" class="ng-pristine ng-valid ng-hide">
+
+                                    <!--tich hop LTI cua TimeToKnow-->
+                                    <!-- ngRepeat: (key, value) in item.launch_data -->
+                                    <input type="hidden" name="oauth_signature" value="" autocomplete="off">
+
+
+                                    <div ng-show="item.isOutSystem==&#39;1&#39;" class="list-product-info ng-hide">
+
+                                        <div class="list-product-info-thumb">
+                                            <div class="product-info-thumb-icons">
+                                                <img src="assets/t2k_bn.png" alt="">
+                                            </div>
+                                            <img ng-src="/upload/img/nhh_hl3d_56/thumb.png" alt="Bộ môn Sinh lý Lao động" class="product-info-thumb-img" src="assets/img/nv/7.PNG">
+                                        </div>
+                                        <a href="javascript:void(0);" class="product-info-cate ng-binding"> Các bài về quản trị nhân lực</a>
+                                        <!-- <a href="javascript:void(0);" class="ss-product-tit ng-binding">Bộ môn Giải phẫu</a> -->
+                                        <div class="product-info-tag">
+                                            <a href="javascript:void(0);" class="product-info-cate ng-binding">Video</a>
+
+                                            <a href="javascript:void(0);" class="ss-btn-flat-gra-orange">Miễn phí</a>
+                                        </div>
+                                        <div class="product-rate">
+                                            <!--<span>Đánh giá:</span>-->
+                                            <div class="rate-star"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_border</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+
+
+                            </div><!-- end ngRepeat: item in products --><div class="col-sm-3 ng-scope" style="margin-bottom: 30px;" ng-repeat="item in products">
+                                <a href="#">
+                                    </a><div class="list-product-info"><a href="#">
+                                        <div class="list-product-info-thumb">
+                                            <div class="product-info-thumb-icons" ng-mouseover="hoverIn(item.id,item.extension)">
+                                                <!-- ngIf: item.product_type=='2' -->
+                                                <!-- ngIf: item.product_type=='1' -->
+                                                <!-- ngIf: item.product_type=='4' --><img ng-if="item.product_type==&#39;4&#39;" src="assets/ss-ic-product-tag-video-white.svg" alt="" class="ng-scope"><!-- end ngIf: item.product_type=='4' -->
+
+                                                <!-- ngIf: item.product_type=='3' -->
+                                            </div>
+                                            <img ng-src="/upload/img/nhh_hl3d_55/thumb.png" alt="" class="product-info-thumb-img" src="assets/img/nv/8.PNG">
+                                        </div>
+                                        </a><a ui-sref="product({alias:item.product_alias})" class="product-info-cate ng-binding" href="#">Các bài giảng về quản trị dịch vụ công</a>
+                                        <!-- <a ui-sref="product({alias:item.product_alias})" class="ss-product-tit ng-binding" href="#">Bộ môn Giải phẫu thực hành</a> -->
+                                        <div class="product-info-tag">
+                                            <a ui-sref="product({alias:item.product_alias})" class="product-info-cate ng-binding" href="#">Video</a>
+
+                                            <a ui-sref="product({alias:item.product_alias})" class="ss-btn-flat-gra-orange ng-binding" href="#">Miễn phí</a>
+                                        </div>
+                                        <div class="product-rate">
+                                            <!--<span>Đánh giá:</span>-->
+                                            <div class="rate-star"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_border</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+
+                            </div><!-- end ngRepeat: item in products --><div class="col-sm-3 ng-scope" style="margin-bottom: 30px;" ng-repeat="item in products">
+                                <a href="#">
+                                    </a><div class="list-product-info"><a href="#">
+                                        <div class="list-product-info-thumb">
+                                            <div class="product-info-thumb-icons" ng-mouseover="hoverIn(item.id,item.extension)">
+                                                <!-- ngIf: item.product_type=='2' -->
+                                                <!-- ngIf: item.product_type=='1' -->
+                                                <!-- ngIf: item.product_type=='4' --><img ng-if="item.product_type==&#39;4&#39;" src="assets/ss-ic-product-tag-video-white.svg" alt="" class="ng-scope"><!-- end ngIf: item.product_type=='4' -->
+
+                                                <!-- ngIf: item.product_type=='3' -->
+                                            </div>
+                                            <img ng-src="/upload/img/nhh_hl3d_54/thumb.png" alt="" class="product-info-thumb-img" src="assets/img/nv/9.PNG">
+                                        </div>
+                                        </a><a ui-sref="product({alias:item.product_alias})" class="product-info-cate ng-binding" href="#">Các bài giảng về quản trị học</a>
+                                        <!-- <a ui-sref="product({alias:item.product_alias})" class="ss-product-tit ng-binding" href="#">Thành phần và chức năng của máu</a> -->
+                                        <div class="product-info-tag">
+                                            <a ui-sref="product({alias:item.product_alias})" class="product-info-cate ng-binding" href="#">Học liệu khoa học 3D</a>
+
+                                            <a ui-sref="product({alias:item.product_alias})" class="ss-btn-flat-gra-orange ng-binding" href="#">Miễn phí</a>
+                                        </div>
+                                        <div class="product-rate">
+                                            <!--<span>Đánh giá:</span>-->
+                                            <div class="rate-star"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_border</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                    </div><!--END ss-list-product-->
+
+                    <div class="row">
+                        <div class="col-sm-12 ng-isolate-scope" page="0" custom-path="" pages-count="2547" total-count="30564" search-func="getProducts(page)">
+    <div class="ss-cate-paging" ng-hide="(!pagesCount || pagesCount &lt; 2)">
+        <ul class="pagination pagination-sm">
+            <li><a ng-hide="page == 0" ng-click="search(0)" class="ng-hide"><i class="material-icons">keyboard_arrow_left</i>Đầu</a></li>
+            <li><a ng-hide="page == 0" ng-click="search(page-1)" class="ng-hide">&lt;</a></li>
+            <!-- ngRepeat: n in range() --><li ng-repeat="n in range()" ng-class="{active: n == page}" class="ng-scope active">
+                <!-- ngIf: n != page -->
+                <!-- ngIf: n == page --><span ng-if="n == page" class="ng-binding ng-scope">1</span><!-- end ngIf: n == page -->
+            </li><!-- end ngRepeat: n in range() --><li ng-repeat="n in range()" ng-class="{active: n == page}" class="ng-scope">
+                <!-- ngIf: n != page --><a ng-click="search(n)" ng-if="n != page" class="ng-binding ng-scope">2</a><!-- end ngIf: n != page -->
+                <!-- ngIf: n == page -->
+            </li><!-- end ngRepeat: n in range() --><li ng-repeat="n in range()" ng-class="{active: n == page}" class="ng-scope">
+                <!-- ngIf: n != page --><a ng-click="search(n)" ng-if="n != page" class="ng-binding ng-scope">3</a><!-- end ngIf: n != page -->
+                <!-- ngIf: n == page -->
+            </li><!-- end ngRepeat: n in range() --><li ng-repeat="n in range()" ng-class="{active: n == page}" class="ng-scope">
+                <!-- ngIf: n != page --><a ng-click="search(n)" ng-if="n != page" class="ng-binding ng-scope">4</a><!-- end ngIf: n != page -->
+                <!-- ngIf: n == page -->
+            </li><!-- end ngRepeat: n in range() --><li ng-repeat="n in range()" ng-class="{active: n == page}" class="ng-scope">
+                <!-- ngIf: n != page --><a ng-click="search(n)" ng-if="n != page" class="ng-binding ng-scope">5</a><!-- end ngIf: n != page -->
+                <!-- ngIf: n == page -->
+            </li><!-- end ngRepeat: n in range() -->
+            <li><a ng-hide="page == pagesCount - 1" ng-click="search(pagePlus(1))">&gt;</a></li>
+            <li><a ng-hide="page == pagesCount - 1" ng-click="search(pagesCount - 1)">Cuối<i class="material-icons">keyboard_arrow_right</i></a></li>
+        </ul>
+    </div>
+</div>
+                    </div><!--END row-->
+                </div>
+            </div><!--END row-->
+        </div><!--END ss-content-->
+    </div><!--END container-->
+</div><!--END ss-detail-content-->
+
+<script class="ng-scope">
+    $(document).ready(function () {
+        $('label.tree-toggler').click(function () {
+            $(this).parent().children('ul.tree').toggle(300);
+        });
+
+        $('span.btn-nav-detail-menu-no-scroll,.btn-nav-detail-menu').click(function(){
+	
+            var parent = $(this).parent();
+            if($(parent).hasClass('open')){
+                $(parent).removeClass('open');
+            }else{
+                $(parent).addClass('open');
+            }
+        });
+    });
+</script>
+
+
+<style class="ng-scope">
+
+    .detail-store {
+        top: -30px;
+    }
+
+    .search-page a {
+        font-style: italic;
+        font-size: 12px;
+        display: inline;
+        color: #f96d1a;
+    }
+
+    .search-page a:hover {
+        font-style: italic;
+        font-size: 12px;
+        display: inline;
+        color: #f96d1a;
+    }
+
+    li.borderless {
+        border-top: 0 none;
+    }
+
+    .btn-treeview {
+        display: block;
+        width: 100%;
+        height: 48px;
+        line-height: 48px;
+        border-radius: 2px;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 500;
+        padding: 0 15px;
+        position: relative;
+        background: #fb892a;
+        background: linear-gradient(to right, #fb892a, #f96d1a);
+        overflow: hidden;
+        transition: all 0.15s ease;
+        -webkit-transition: all 0.15s ease;
+        -moz-transition: all 0.15s ease;
+        cursor: pointer;
+        text-align: center;
+        color: #ffffff;
+    }
+</style>
+</div>
+</div>
+
+<div class="ss-footer ng-scope">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="ss-footer-col">
+                    <span class="ss-footer-tit">Công ty</span>
+                    <ul>
+                        <li><a href="javascript:void(0)">About</a></li>
+                        <li><a href="javascript:void(0)">Contact</a></li>
+                    </ul>
+                </div><!--END ss-footer-col-->
+            </div>
+            <div class="col-sm-3">
+                <div class="ss-footer-col">
+                    <span class="ss-footer-tit">Hỗ trợ</span>
+                    <ul>
+                        <li><a href="javascript:void(0)">FAQ</a></li>
+                        <li><a href="javascript:void(0)">Support</a></li>
+                    </ul>
+                </div><!--END ss-footer-col-->
+            </div>
+            <div class="col-sm-3">
+                <div class="ss-footer-col">
+                    <span class="ss-footer-tit">Theo dõi</span>
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0)" class="ss-footer-btn-social"><img src="assets/ss-ic-fb-black.svg" alt=""></a>
+                            <a href="javascript:void(0)" class="ss-footer-btn-social"><img src="assets/ss-ic-gg-black.svg" alt=""></a>
+                            <a href="javascript:void(0)" class="ss-footer-btn-social"><img src="assets/ss-ic-tt-black.svg" alt=""></a>
+                        </li>
+                    </ul>
+                </div><!--END ss-footer-col-->
+            </div>
+        </div><!--END row-->
+    </div><!--END container-->
+</div><!--END ss-footer--></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+body {
+    overflow: hidden;
+}
+
+/* select {
+position: absolute;
+}
+.box-lang{
+height: 100px; 
+position: relative;
+} */
+.dropdown .dropdown-menu {
+    max-height: 50px !important;
+    overflow: auto;
+}
+.vienvang {
+    border: 2px solid #eaea27 !important;
+}
+
+.breadcrumb>li+li:before {
+    padding: 0 5px;
+    color: #ccc;
+    content: "/\00a0";
+}
+
+.breadcrumb {
+    padding: .4rem 1rem;
+    background-color: #fff;
+}
+
+.breadcrumb a {
+    color: #667fa0;
+}
+
+.breadcrumb li,
+.breadcrumb a {
+    font-size: 14px;
+}
+
+.breadcrumb li:last-child a {
+    font-weight: 700;
+    color: #444;
+}
+
+
+body {
+    background-image: url("http://aicdemo.com/daihocnoivusv/public/images/dieuhanhthongminh/bk.png");
+    height: 100vh;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+}
+
+
+.highcharts-button-box,
+.highcharts-credits {
+    display: none;
+}
+
+.duong_dan {
+    color: #fff;
+    margin-left: 26px;
+    font-size: 20px;
+    padding-top: 15px;
+    padding-left: 35px;
+    display: none;
+}
+
+.duong_dan li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.duong_dan li a {
+    color: #fff;
+}
+.navbar-light .navbar-brand {
+    color: rgba(0, 0, 0, .9);
+    height: 81px;
+    display: inline-flex;
+}
+
+.navbar span.logo {
+    width: 69px;
+    margin-right: 20px;
+}
+
+.name_brand {
+    color: #fff;
+    font-size: 20px;
+    padding-top: 5px;
+}
+
+.name_brand p {
+    margin-bottom: 0;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.navbar {
+    background-color: #1eace0e8 !important;
+}
+
+.navbar .logo img {
+    width: 100%;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.navbar {
+    box-shadow: 0 0 4px 0 #cacaca;
+    padding: 0rem 1rem;
+}
+
+.navbar-brand {
+    color: #464a4e;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.container {
+    width: 1280px;
+    max-width: 1280px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+a.nav-link {
+    font-size: 16px;
+}

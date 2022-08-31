@@ -1,0 +1,55 @@
+.btn_page_control a {
+    background: #0257ab;
+}
+.btn_page_control a:before{
+  
+    border-color: transparent transparent transparent #0257ab;
+}
+.btn_page_control li a:after {
+    
+    
+   border-color: transparent !important;; 
+}
+.item >h6 >img, .content1 .item >h5 >img, .content2 .item >h5 >img{
+    width: 60px;
+    float: right;
+}
+.item h6, .item h5 {
+    line-height: 50px;
+}
+.content:hover, .content1:hover {
+    transform: scale(1.05,1.05);
+}
+.content .item, .content1 .item {
+    padding: 10px 15px;
+}
+body {
+        background: url("img/bk.jpg") no-repeat fixed center; 
+        background-size:cover;
+    }
+    .duong_dan li{
+    display: inline-block;
+    margin-right: 10px;
+}
+.duong_dan{
+    /*margin-left: 20px;*/
+    background-image:linear-gradient(#ffffff00, #cccc)
+
+}
+.duong_dan li a{
+    font-size: 20px !important;
+}
+.duong_dan li a:hover{
+    color: #009;
+}
+.tai_trang{
+    color: #006CB6;
+    font-size: 20px;
+}
+.container-eva {
+    width: 100%;
+    padding-right: 150px;
+    padding-left: 150px;
+    margin-right: auto;
+    margin-left: auto;
+  }

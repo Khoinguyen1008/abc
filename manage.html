@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <title>ĐẠI HỌC NỘI VỤ -TIỆN ÍCH SINH VIÊN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Saira&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/manage.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Header -->
+    <header>
+        <div class="row">
+            <div class="header-left col-md-4">
+                <div class="box_logo">
+                    <a href="logo.html"><img src="./img/dhnoivu.png" alt=""></a>
+                </div>
+                <div class="box_nameUni">
+                    <p class="nameUni_top">ĐẠI HỌC NỘI VỤ HÀ NỘI</p>
+                    <p class="nameUni_bottom">TIỆN ÍCH SINH VIÊN</p>
+                </div>
+
+
+            </div>
+            <div class="header-right col-md-8">
+                <div class="header_menu_right">
+                    <nav class="menu">
+                        <a href="" class="item-menu">GIỚI THIỆU</a>
+                        <a href="" class="item-menu">ĐĂNG NHẬP</a>
+                        <a href="" class="item-menu">HƯỚNG DẪN SỬ DỤNG</a>
+                        <a href="" class="item-menu">LIÊN HỆ</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main style="position: relative">
+        <div class="container-fluid mt-5">
+
+            <div class="row" style="margin-top: 10%">
+                <div class="col-2">
+                    <div class="nav flex-column nav-pills f5tab" id="v-pills-tab" role="tablist"
+                        aria-orientation="vertical">
+                        <a class="nav-link active" href="#tab1" role="tab" data-toggle="tab">Thời khóa biểu</a>
+                        <a class="nav-link" href="#tab2" role="tab" data-toggle="tab">Kết quả học tập</a>
+                        <a class="nav-link" href="#tab3" role="tab" data-toggle="tab">Đăng ký môn học</a>
+                        <a class="nav-link" href="#tab4" role="tab" data-toggle="tab">Nghiên cứu khoa học</a>
+                        <a class="nav-link" href="#tab5" role="tab" data-toggle="tab">Học phí</a>
+                    </div>
+                </div>
+                <div class="col-10">
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane in active" id="tab1">
+                            <table class="table table-bordered text-white">
+                                <thead>
+                                    <tr class="text-uppercase">
+                                        <td>STT</td>
+                                        <td>Học phần</td>
+                                        <td>Số TC</td>
+                                        <td>Nhóm</td>
+                                        <td>Thứ</td>
+                                        <td>Tiết</td>
+                                        <td>Giảng đường</td>
+                                        <td>Ngôn ngữ<br>giảng dạy</td>
+                                        <td>Giảng viên</td>
+                                        <td>Học hàm<br>học vị</td>
+                                        <td>Số điện thoại</td>
+                                        <td>Ghi chú</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Kỹ năng giao tiếp </td>
+                                        <td>5</td>
+                                        <td>2</td>
+                                        <td>2</td>
+                                        <td>1-4</td>
+                                        <td>401 Y1</td>
+                                        <td>Tiếng Việt</td>
+                                        <td>Ngô Xuân Khoa</td>
+                                        <td>PGS TS</td>
+                                        <td>0911123435</td>
+                                        <td>Thực hành</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Dịch vụ hành chính công </td>
+                                        <td>5</td>
+                                        <td>2</td>
+                                        <td>2</td>
+                                        <td>1-4</td>
+                                        <td>401 Y1</td>
+                                        <td>Tiếng Việt</td>
+                                        <td>Nguyễn Văn Thức</td>
+                                        <td>TS</td>
+                                        <td>0911123435</td>
+                                        <td>Lý thuyết</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Triết học Mac-Lênin</td>
+                                        <td>5</td>
+                                        <td>2</td>
+                                        <td>2</td>
+                                        <td>1-4</td>
+                                        <td>401 Y1</td>
+                                        <td>Tiếng Việt</td>
+                                        <td>Nguyễn Thúy Vân</td>
+                                        <td>PGS TS</td>
+                                        <td>0911123435</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Toán cao cấp</td>
+                                        <td>5</td>
+                                        <td>2</td>
+                                        <td>2</td>
+                                        <td>1-4</td>
+                                        <td>401 Y1</td>
+                                        <td>Tiếng Việt</td>
+                                        <td>Ninh Thị Thu</td>
+                                        <td>ThS</td>
+                                        <td>0911123435</td>
+                                        <td>Lý thuyết</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Cơ sở vật lý</td>
+                                        <td>5</td>
+                                        <td>2</td>
+                                        <td>2</td>
+                                        <td>1-4</td>
+                                        <td>401 Y1</td>
+                                        <td>Tiếng Việt</td>
+                                        <td>Phùng Quốc Bảo</td>
+                                        <td>PGS TS</td>
+                                        <td>0911123435</td>
+                                        <td>Lý thuyết</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="tab2">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>STT</th>
+                                        <th>Tên môn học</th>
+                                        <!--   <th>Số tín chỉ</th> -->
+                                        <th>Điểm</th>
+                                        <th>Thi lần</th>
+                                        <th>Ghi chú</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Dịch vụ hành chính công</td>
+                                        <!--  <td>2</td> -->
+                                        <td>8.0</td>
+                                        <td>1</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Quản lý hộ tịch</td>
+                                        <!--   <td>3</td> -->
+                                        <td>7.5</td>
+                                        <td>1</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Thủ tục hành chính</td>
+                                        <!--     <td>1</td> -->
+                                        <td>7.0</td>
+                                        <td>1</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Kỹ năng giao tiếp</td>
+                                        <!--  <td>2</td> -->
+                                        <td>7.5</td>
+                                        <td>1</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Giáo dục thể chất</td>
+                                        <!--    <td>3</td> -->
+                                        <td>6.5</td>
+                                        <td>1</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>
+                                            Tin học đại cương
+                                        </td>
+
+                                        <td>7.0</td>
+                                        <td>1</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>Xã hội học đại cương</td>
+                                        <td>8.0</td>
+                                        <td>1</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>Tiếng anh cơ bản 1</td>
+                                        <td>9.0</td>
+                                        <td>1</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>Lý luận nhà nước và pháp luật</td>
+                                        <td>6.5</td>
+                                        <td>1</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>Tiếng Việt thực hành</td>
+                                        <td>8.5</td>
+                                        <td>1</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="w-100 text-right mb-0">
+                                <button type="button" class="btn btn-info" data-toggle="collapse"
+                                    data-target="#form_sosanh">So Sánh</button>
+                            </p>
+
+                            <div id="form_sosanh" class="collapse">
+                                <h5 class="text-danger">SO SÁNH KẾT QUẢ CỦA SINH VIÊN</h5>
+                                <div class="table-responsive" style="margin-top: 15px;">
+                                    <table class="table table-bordered table-hover" style="border: 1px solid #ddd;">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th style="width: 40%;">Kết quả của sinh viên</th>
+                                                <th>Môn học</th>
+                                                <th style="width: 40%;">Trung bình chung của trường</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="progress progress-revert" style="height: 25px;">
+                                                        <div class="progress-bar progress-bar-revert" role="progressbar"
+                                                            style="width: 70%;" aria-valuenow="76" aria-valuemin="0"
+                                                            aria-valuemax="100">7.0</div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">Tin học</td>
+                                                <td>
+                                                    <div class="progress" style="height: 25px;">
+                                                        <div class="progress-bar" role="progressbar" style="width: 80%;"
+                                                            aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">8.0
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="progress progress-revert" style="height: 25px;">
+                                                        <div class="progress-bar progress-bar-revert" role="progressbar"
+                                                            style="width: 67%;" aria-valuenow="83" aria-valuemin="0"
+                                                            aria-valuemax="100">6.7</div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">Thể dục</td>
+                                                <td>
+                                                    <div class="progress" style="height: 25px;">
+                                                        <div class="progress-bar" role="progressbar" style="width: 85%;"
+                                                            aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">8.5
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="progress progress-revert" style="height: 25px;">
+                                                        <div class="progress-bar progress-bar-revert" role="progressbar"
+                                                            style="width: 70%;" aria-valuenow="86" aria-valuemin="0"
+                                                            aria-valuemax="100">7.0</div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">Toán</td>
+                                                <td>
+                                                    <div class="progress" style="height: 25px;">
+                                                        <div class="progress-bar" role="progressbar" style="width: 82%;"
+                                                            aria-valuenow="82" aria-valuemin="0" aria-valuemax="100">8.2
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="progress progress-revert" style="height: 25px;">
+                                                        <div class="progress-bar progress-bar-revert" role="progressbar"
+                                                            style="width: 75%;" aria-valuenow="69" aria-valuemin="0"
+                                                            aria-valuemax="100">7.5</div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">Ngữ Văn</td>
+                                                <td>
+                                                    <div class="progress" style="height: 25px;">
+                                                        <div class="progress-bar" role="progressbar" style="width: 75%;"
+                                                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">7.5
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="progress progress-revert" style="height: 25px;">
+                                                        <div class="progress-bar progress-bar-revert" role="progressbar"
+                                                            style="width: 100%;" aria-valuenow="83" aria-valuemin="0"
+                                                            aria-valuemax="100">10.0</div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">Lịch sử</td>
+                                                <td>
+                                                    <div class="progress" style="height: 25px;">
+                                                        <div class="progress-bar" role="progressbar" style="width: 70%;"
+                                                            aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">7.0
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="progress progress-revert" style="height: 25px;">
+                                                        <div class="progress-bar progress-bar-revert" role="progressbar"
+                                                            style="width:69%;" aria-valuenow="73" aria-valuemin="0"
+                                                            aria-valuemax="100">6.9</div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">Tiếng Anh</td>
+                                                <td>
+                                                    <div class="progress" style="height: 25px;">
+                                                        <div class="progress-bar" role="progressbar" style="width: 80%;"
+                                                            aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">8.0
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="progress progress-revert" style="height: 25px;">
+                                                        <div class="progress-bar progress-bar-revert" role="progressbar"
+                                                            style="width: 60%;" aria-valuenow="73" aria-valuemin="0"
+                                                            aria-valuemax="100">6.0</div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">Địa Lý</td>
+                                                <td>
+                                                    <div class="progress" style="height: 25px;">
+                                                        <div class="progress-bar" role="progressbar" style="width: 60%;"
+                                                            aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">6.0
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="progress progress-revert" style="height: 25px;">
+                                                        <div class="progress-bar progress-bar-revert" role="progressbar"
+                                                            style="width: 85%;" aria-valuenow="83" aria-valuemin="0"
+                                                            aria-valuemax="100">8.5</div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">Giáo dục công dân</td>
+                                                <td>
+                                                    <div class="progress" style="height: 25px;">
+                                                        <div class="progress-bar" role="progressbar" style="width: 80%;"
+                                                            aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">8.0
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="progress progress-revert" style="height: 25px;">
+                                                        <div class="progress-bar progress-bar-revert" role="progressbar"
+                                                            style="width: 88%;" aria-valuenow="73" aria-valuemin="0"
+                                                            aria-valuemax="100">8.8</div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">Giáo dục quốc phòng</td>
+                                                <td>
+                                                    <div class="progress" style="height: 25px;">
+                                                        <div class="progress-bar" role="progressbar" style="width: 90%;"
+                                                            aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">9.0
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="tab3">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>STT</th>
+                                        <th>Tên môn học</th>
+                                        <!--  <th>Số tín chỉ</th> -->
+
+                                        <th>Học phí</th>
+                                        <th>Bắt buộc</th>
+                                        <th>Tự chọn</th>
+                                        <th>Còn trống</th>
+                                        <th>Đăng ký</th>
+                                        <th>Ghi chú</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Luật tố tụng hình sự</td>
+                                        <!--  <td>2</td> -->
+
+                                        <td></td>
+                                        <td>
+                                            <i class="fa fa-check" aria-hidden="true"></i>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <input type="checkbox">
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Luật hiến pháp nước ngoài</td>
+                                        <!--  <td>3</td> -->
+
+                                        <td></td>
+                                        <td>
+                                            <i class="fa fa-check" aria-hidden="true"></i>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <input type="checkbox">
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Cải cách nền hành chính quốc gia</td>
+                                        <!--  <td>3</td>
+        -->
+                                        <td></td>
+                                        <td>
+                                            <i class="fa fa-check" aria-hidden="true"></i>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <input type="checkbox">
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Công chứng, chứng thực</td>
+                                        <!--   <td>1</td>
+         -->
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <i class="fa fa-check" aria-hidden="true"></i>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                            <input type="checkbox">
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Tiếng anh chuyên nghành</td>
+                                        <!--  <td>2</td> -->
+
+                                        <td></td>
+                                        <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <input type="checkbox">
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Tư tưởng Hồ Chí Minh</td>
+
+
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <i class="fa fa-check" aria-hidden="true"></i>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                            <input type="checkbox">
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>Luật môi trường</td>
+
+                                        <td></td>
+                                        <td>
+                                            <i class="fa fa-check" aria-hidden="true"></i>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <input type="checkbox">
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>Luật tố tụng hành chính</td>
+
+
+                                        <td></td>
+                                        <td>
+                                            <i class="fa fa-check" aria-hidden="true"></i>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <input type="checkbox">
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>Luật hiến pháp Việt Nam</td>
+
+
+                                        <td></td>
+                                        <td>
+                                            <i class="fa fa-check" aria-hidden="true"></i>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <input type="checkbox">
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <!--  <tr>
+        <td>10</td>
+        <td>Giáo dục quốc phòng</td>
+ 
+       
+        <td></td>
+        <td>
+            <i class="fa fa-check" aria-hidden="true"></i>
+        </td>
+        <td></td>
+        <td></td>
+        <td>
+            <input type="checkbox">
+        </td>
+        <td></td>
+    </tr> -->
+                                </tbody>
+                            </table>
+                            <p class="text-right w-100">
+                                <button class="btn btn-info">Xác nhận</button>
+                            </p>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="tab4">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>STT</th>
+                                        <th>Tên đề tài</th>
+                                        <th>Số lượng đã đăng ký</th>
+                                        <th>Đăng ký</th>
+                                        <th>Ghi chú</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>
+                                            Áp dụng quy định pháp luật dân sự trong giao kết và thực hiện hợp đồng thuê
+                                            nhà của sinh viên trên địa bàn thành phố Hà Nội
+                                        </td>
+                                        <td>1</td>
+                                        <td>
+                                            <input type="checkbox">
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>
+                                            Sổ tay pháp lý về thuê nhà dành cho sinh viên
+                                        </td>
+                                        <td>3</td>
+                                        <td>
+                                            <input type="checkbox">
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>
+                                            Giáo dục ý thức bảo vệ môi trường cho sinh viên Trường Đại học Nội vụ Hà Nội
+                                        </td>
+                                        <td>2</td>
+                                        <td>
+                                            <input type="checkbox">
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>
+                                            Nhận thức về văn hóa chính trị của sinh viên Trương Đại học Nội vụ Nội vụ Hà
+                                            Nội hiện nay
+                                        </td>
+                                        <td>2</td>
+                                        <td>
+                                            <input type="checkbox">
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>
+                                            Đổi mới chính sách tiền lương ở Việt Nam trong thời kỳ hội nhập hướng tới
+                                            mức lương bảo đảm cuộc sống
+                                        </td>
+                                        <td>1</td>
+                                        <td>
+                                            <input type="checkbox">
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>
+                                            Giải pháp nâng cao chỉ số cải cách hành chính của Bộ Nội vụ.
+                                        </td>
+                                        <td>3</td>
+                                        <td>
+                                            <input type="checkbox">
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>
+                                            Đào tạo nhân lực chất lượng cao tại Trường Đại học Nội vụ Hà Nội.
+                                        </td>
+                                        <td>2</td>
+                                        <td>
+                                            <input type="checkbox">
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>
+                                            Cải cách thủ tục hành chính trong lĩnh vực khen thưởng trong giai đoạn hiện
+                                            nay.
+                                        </td>
+                                        <td>3</td>
+                                        <td>
+                                            <input type="checkbox">
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>
+                                            Đánh giá tổ chức hành chính nhà nước - Lý luận và thực tiễn.
+                                        </td>
+                                        <td>2</td>
+                                        <td>
+                                            <input type="checkbox">
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>
+                                            Quản lý nguồn nhân lực khu vực công dựa trên năng lực - lý luận và thực
+                                            tiễn.
+                                        </td>
+                                        <td>2</td>
+                                        <td>
+                                            <input type="checkbox">
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="text-right w-100">
+                                <button class="btn btn-info">Xác nhận</button>
+                            </p>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="tab5">
+                            <div style="margin-bottom: 15px; margin-top: -10px; width: 30%" class="input-group">
+                                <input type="text" class="form-control" placeholder="Tìm kiếm">
+                                <div class="input-group-append">
+                                    <button class="btn btn-secondary" type="button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div style="height: 450px;overflow-y: scroll">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>STT</th>
+                                            <th>Mã HS</th>
+                                            <th>Họ và tên</th>
+                                            <th>Khoa</th>
+                                            <th>Lớp</th>
+                                            <th>Nợ kỳ trước</th>
+                                            <th>Phải thu kỳ này</th>
+                                            <th>Tổng phải thu</th>
+                                            <th>Ghi chú</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>743452342</td>
+                                            <td>Nguyễn Thu Trang</td>
+                                            <td>QLXH</td>
+                                            <td>CQ49 22.04</td>
+                                            <td>0</td>
+                                            <td>17500000</td>
+                                            <td>17500000</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>18020017</td>
+                                            <td>Trần Mạnh Hiếu</td>
+                                            <td>QLXH</td>
+                                            <td>CQ49 22.04</td>
+                                            <td>0</td>
+                                            <td>17500000</td>
+                                            <td>17500000</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>18020026</td>
+                                            <td>Trần Trung Kiên</td>
+                                            <td>QLXH</td>
+                                            <td>CQ49 22.04</td>
+                                            <td>0</td>
+                                            <td>12700000</td>
+                                            <td>12700000</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>18020032</td>
+                                            <td>Nguyễn Hải Long</td>
+                                            <td>QLXH</td>
+                                            <td>CQ49 22.04</td>
+                                            <td>0</td>
+                                            <td>17500000</td>
+                                            <td>17500000</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>18020035</td>
+                                            <td>Mai Hoàng Long</td>
+                                            <td>QLXH</td>
+                                            <td>CQ49 22.04</td>
+                                            <td>0</td>
+                                            <td>17500000</td>
+                                            <td>17500000</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>18020038</td>
+                                            <td>Trần Quỳnh Mai</td>
+                                            <td>QLXH</td>
+                                            <td>CQ49 22.04</td>
+                                            <td>0</td>
+                                            <td>17500000</td>
+                                            <td>17500000</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>18020041</td>
+                                            <td>Đào Công Minh</td>
+                                            <td>QLXH</td>
+                                            <td>CQ49 22.04</td>
+                                            <td>0</td>
+                                            <td>17500000</td>
+                                            <td>17500000</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td>18020047</td>
+                                            <td>Tạ Đình Quý</td>
+                                            <td>QLXH</td>
+                                            <td>CQ49 22.04</td>
+                                            <td>0</td>
+                                            <td>17500000</td>
+                                            <td>17500000</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>9</td>
+                                            <td>18020050</td>
+                                            <td>Nguyễn Minh Tân</td>
+                                            <td>QLXH</td>
+                                            <td>CQ49 22.04</td>
+                                            <td>0</td>
+                                            <td>17500000</td>
+                                            <td>17500000</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>10</td>
+                                            <td>18020101</td>
+                                            <td>Hàn Tiến Khánh An</td>
+                                            <td>QLXH</td>
+                                            <td>CQ49 22.04</td>
+                                            <td>0</td>
+                                            <td>17500000</td>
+                                            <td>17500000</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>11</td>
+                                            <td>18020104</td>
+                                            <td>Đoàn Đình An</td>
+                                            <td>QLXH</td>
+                                            <td>CQ49 22.04</td>
+                                            <td>0</td>
+                                            <td>17500000</td>
+                                            <td>17500000</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>12</td>
+                                            <td>18020106</td>
+                                            <td>Nguyễn Quốc An</td>
+                                            <td>QLXH</td>
+                                            <td>CQ49 22.04</td>
+                                            <td>0</td>
+                                            <td>17500000</td>
+                                            <td>17500000</td>
+                                            <td></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </main>
+    </div>
+
+
+
+    </body>
+
+</html>
